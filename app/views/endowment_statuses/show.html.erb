@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @endowment_status.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @endowment_status.description %>
+</p>
+
+<%= link_to 'Edit', edit_endowment_status_path(@endowment_status) %> |
+<%= link_to 'Back', endowment_statuses_path %>

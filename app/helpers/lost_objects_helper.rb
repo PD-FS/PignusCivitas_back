@@ -1,0 +1,2 @@
+module LostObjectsHelper
+end

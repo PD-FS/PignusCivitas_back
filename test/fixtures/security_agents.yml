@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  security_agent_role: one
+  division: MyString
+  admission_date: 2018-08-12
+  security_company: one
+  security_agent: one
+  weapon: one
+  agent_type: one
+  schedule: one
+  person: one
+
+two:
+  security_agent_role: two
+  division: MyString
+  admission_date: 2018-08-12
+  security_company: two
+  security_agent: two
+  weapon: two
+  agent_type: two
+  schedule: two
+  person: two

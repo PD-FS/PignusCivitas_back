@@ -1,0 +1,72 @@
+<%= form_with(model: community, local: true) do |form| %>
+  <% if community.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(community.errors.count, "error") %> prohibited this community from being saved:</h2>
+
+      <ul>
+      <% community.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admin_address %>
+    <%= form.text_field :admin_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :webSite %>
+    <%= form.text_field :webSite %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attendant %>
+    <%= form.text_field :attendant %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_field :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postal_code %>
+    <%= form.text_field :postal_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :community_id %>
+    <%= form.text_field :community_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :community_type_id %>
+    <%= form.text_field :community_type_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

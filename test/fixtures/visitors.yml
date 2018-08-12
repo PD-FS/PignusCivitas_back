@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checkin_date: 2018-08-12
+  checkout_date: 2018-08-12
+  notes: MyString
+  destination: MyString
+  vehicle: one
+  community: one
+  person: one
+
+two:
+  checkin_date: 2018-08-12
+  checkout_date: 2018-08-12
+  notes: MyString
+  destination: MyString
+  vehicle: two
+  community: two
+  person: two

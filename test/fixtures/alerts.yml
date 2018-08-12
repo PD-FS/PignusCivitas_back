@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  content: MyString
+  creation_date: 2018-08-12
+  alert_status: one
+  coordinates: MyString
+  evidence: MyString
+  community: one
+  user: one
+
+two:
+  title: MyString
+  content: MyString
+  creation_date: 2018-08-12
+  alert_status: two
+  coordinates: MyString
+  evidence: MyString
+  community: two
+  user: two

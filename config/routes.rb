@@ -1,4 +1,54 @@
 Rails.application.routes.draw do
+  resources :agent_schedules
+  resources :community_staffs
+  resources :alert_communities
+  resources :member_type_members
+  resources :minute_books
+  resources :items
+  resources :layouts
+  resources :alerts
+  resources :users
+  resources :black_lists
+  resources :check_staffs
+  resources :staffs
+  resources :events
+  resources :endowments
+  resources :contracts
+  resources :lost_objects
+  resources :asset_stocks
+  resources :check_vehicles
+  resources :visitors
+  resources :security_agents
+  resources :members
+  resources :communities
+  resources :people
+  resources :cities
+  resources :assets
+  resources :schedules
+  resources :weapons
+  resources :vehicles
+  resources :day_of_weeks
+  resources :item_statuses
+  resources :asset_statuses
+  resources :black_list_statuses
+  resources :weapon_statuses
+  resources :asset_stock_statuses
+  resources :check_vehicle_statuses
+  resources :endowment_statuses
+  resources :alert_statuses
+  resources :contract_statuses
+  resources :event_statuses
+  resources :countries
+  resources :security_agent_roles
+  resources :staff_jobs
+  resources :weapon_types
+  resources :community_types
+  resources :event_types
+  resources :agent_types
+  resources :member_types
+  resources :weapon_locations
+  resources :item_types
+  resources :security_companies
   resources :vehicle_types
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "welcome#index"

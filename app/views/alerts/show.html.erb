@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @alert.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @alert.content %>
+</p>
+
+<p>
+  <strong>Creation date:</strong>
+  <%= @alert.creation_date %>
+</p>
+
+<p>
+  <strong>Alert status:</strong>
+  <%= @alert.alert_status %>
+</p>
+
+<p>
+  <strong>Coordinates:</strong>
+  <%= @alert.coordinates %>
+</p>
+
+<p>
+  <strong>Evidence:</strong>
+  <%= @alert.evidence %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @alert.community %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @alert.user %>
+</p>
+
+<%= link_to 'Edit', edit_alert_path(@alert) %> |
+<%= link_to 'Back', alerts_path %>

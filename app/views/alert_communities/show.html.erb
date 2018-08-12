@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alert community:</strong>
+  <%= @alert_community.alert_community %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @alert_community.community %>
+</p>
+
+<p>
+  <strong>Alert:</strong>
+  <%= @alert_community.alert %>
+</p>
+
+<%= link_to 'Edit', edit_alert_community_path(@alert_community) %> |
+<%= link_to 'Back', alert_communities_path %>

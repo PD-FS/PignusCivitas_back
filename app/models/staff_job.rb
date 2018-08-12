@@ -1,0 +1,2 @@
+class StaffJob < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Staff Jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @staff_jobs.each do |staff_job| %>
+      <tr>
+        <td><%= staff_job.name %></td>
+        <td><%= staff_job.description %></td>
+        <td><%= link_to 'Show', staff_job %></td>
+        <td><%= link_to 'Edit', edit_staff_job_path(staff_job) %></td>
+        <td><%= link_to 'Destroy', staff_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Staff Job', new_staff_job_path %>

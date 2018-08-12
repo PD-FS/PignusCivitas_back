@@ -1,0 +1,32 @@
+<%= form_with(model: agent_schedule, local: true) do |form| %>
+  <% if agent_schedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agent_schedule.errors.count, "error") %> prohibited this agent_schedule from being saved:</h2>
+
+      <ul>
+      <% agent_schedule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :schedule_id %>
+    <%= form.text_field :schedule_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :security_agent_id %>
+    <%= form.text_field :security_agent_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contract_id %>
+    <%= form.text_field :contract_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

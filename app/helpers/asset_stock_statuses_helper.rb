@@ -1,0 +1,2 @@
+module AssetStockStatusesHelper
+end

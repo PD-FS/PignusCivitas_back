@@ -1,0 +1,2 @@
+module AgentSchedulesHelper
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stock name:</strong>
+  <%= @endowment.stock_name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @endowment.date %>
+</p>
+
+<p>
+  <strong>Accountable:</strong>
+  <%= @endowment.accountable %>
+</p>
+
+<p>
+  <strong>Endowment status:</strong>
+  <%= @endowment.endowment_status_id %>
+</p>
+
+<p>
+  <strong>Contract:</strong>
+  <%= @endowment.contract %>
+</p>
+
+<%= link_to 'Edit', edit_endowment_path(@endowment) %> |
+<%= link_to 'Back', endowments_path %>

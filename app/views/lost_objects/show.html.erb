@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lost_object.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @lost_object.date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @lost_object.notes %>
+</p>
+
+<p>
+  <strong>Returned to:</strong>
+  <%= @lost_object.returned_to %>
+</p>
+
+<p>
+  <strong>Return date:</strong>
+  <%= @lost_object.return_date %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @lost_object.phone %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @lost_object.community %>
+</p>
+
+<%= link_to 'Edit', edit_lost_object_path(@lost_object) %> |
+<%= link_to 'Back', lost_objects_path %>

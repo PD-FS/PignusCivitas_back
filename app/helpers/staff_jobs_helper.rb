@@ -1,0 +1,2 @@
+module StaffJobsHelper
+end

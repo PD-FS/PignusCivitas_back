@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Security agent role:</strong>
+  <%= @security_agent.security_agent_role %>
+</p>
+
+<p>
+  <strong>Division:</strong>
+  <%= @security_agent.division %>
+</p>
+
+<p>
+  <strong>Admission date:</strong>
+  <%= @security_agent.admission_date %>
+</p>
+
+<p>
+  <strong>Security company:</strong>
+  <%= @security_agent.security_company %>
+</p>
+
+<p>
+  <strong>Security agent:</strong>
+  <%= @security_agent.security_agent %>
+</p>
+
+<p>
+  <strong>Weapon:</strong>
+  <%= @security_agent.weapon %>
+</p>
+
+<p>
+  <strong>Agent type:</strong>
+  <%= @security_agent.agent_type %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @security_agent.schedule %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @security_agent.person %>
+</p>
+
+<%= link_to 'Edit', edit_security_agent_path(@security_agent) %> |
+<%= link_to 'Back', security_agents_path %>

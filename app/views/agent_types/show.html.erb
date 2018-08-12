@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @agent_type.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @agent_type.type %>
+</p>
+
+<%= link_to 'Edit', edit_agent_type_path(@agent_type) %> |
+<%= link_to 'Back', agent_types_path %>

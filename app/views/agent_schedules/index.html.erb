@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agent Schedules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Schedule</th>
+      <th>Security agent</th>
+      <th>Contract</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agent_schedules.each do |agent_schedule| %>
+      <tr>
+        <td><%= agent_schedule.schedule %></td>
+        <td><%= agent_schedule.security_agent %></td>
+        <td><%= agent_schedule.contract %></td>
+        <td><%= link_to 'Show', agent_schedule %></td>
+        <td><%= link_to 'Edit', edit_agent_schedule_path(agent_schedule) %></td>
+        <td><%= link_to 'Destroy', agent_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agent Schedule', new_agent_schedule_path %>

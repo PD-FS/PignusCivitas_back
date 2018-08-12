@@ -1,0 +1,47 @@
+<%= form_with(model: asset_stock, local: true) do |form| %>
+  <% if asset_stock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(asset_stock.errors.count, "error") %> prohibited this asset_stock from being saved:</h2>
+
+      <ul>
+      <% asset_stock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :stock_name %>
+    <%= form.text_field :stock_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :manager %>
+    <%= form.text_field :manager %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_update %>
+    <%= form.date_select :last_update %>
+  </div>
+
+  <div class="field">
+    <%= form.label :asset_stock_status_id %>
+    <%= form.text_field :asset_stock_status_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :asset_id %>
+    <%= form.text_field :asset_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :community_id %>
+    <%= form.text_field :community_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

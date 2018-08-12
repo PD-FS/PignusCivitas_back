@@ -1,0 +1,2 @@
+class WeaponLocation < ApplicationRecord
+end

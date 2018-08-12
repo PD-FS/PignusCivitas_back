@@ -1,0 +1,2 @@
+class SecurityAgentRole < ApplicationRecord
+end

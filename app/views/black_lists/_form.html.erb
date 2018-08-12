@@ -1,0 +1,42 @@
+<%= form_with(model: black_list, local: true) do |form| %>
+  <% if black_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(black_list.errors.count, "error") %> prohibited this black_list from being saved:</h2>
+
+      <ul>
+      <% black_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_field :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :black_list_status_id %>
+    <%= form.text_field :black_list_status_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facts %>
+    <%= form.text_field :facts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :person_id %>
+    <%= form.text_field :person_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

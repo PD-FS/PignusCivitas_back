@@ -1,0 +1,2 @@
+module CommunityTypesHelper
+end

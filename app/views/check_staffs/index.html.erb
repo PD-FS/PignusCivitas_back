@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Check Staffs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entry date</th>
+      <th>Exit date</th>
+      <th>Notes</th>
+      <th>Staff</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @check_staffs.each do |check_staff| %>
+      <tr>
+        <td><%= check_staff.entry_date %></td>
+        <td><%= check_staff.exit_date %></td>
+        <td><%= check_staff.notes %></td>
+        <td><%= check_staff.staff %></td>
+        <td><%= link_to 'Show', check_staff %></td>
+        <td><%= link_to 'Edit', edit_check_staff_path(check_staff) %></td>
+        <td><%= link_to 'Destroy', check_staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Check Staff', new_check_staff_path %>

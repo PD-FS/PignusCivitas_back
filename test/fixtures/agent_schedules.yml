@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schedule: one
+  security_agent: one
+  contract: one
+
+two:
+  schedule: two
+  security_agent: two
+  contract: two

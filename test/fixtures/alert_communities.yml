@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alert_community: one
+  community: one
+  alert: one
+
+two:
+  alert_community: two
+  community: two
+  alert: two

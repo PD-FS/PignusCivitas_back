@@ -1,0 +1,2 @@
+module WeaponStatusesHelper
+end

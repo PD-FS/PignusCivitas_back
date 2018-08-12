@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date: 2018-08-12
+  notes: MyString
+  returned_to: MyString
+  return_date: 2018-08-12
+  phone: MyString
+  community: one
+
+two:
+  name: MyString
+  date: 2018-08-12
+  notes: MyString
+  returned_to: MyString
+  return_date: 2018-08-12
+  phone: MyString
+  community: two

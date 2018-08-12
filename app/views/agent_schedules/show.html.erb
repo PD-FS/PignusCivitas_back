@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @agent_schedule.schedule %>
+</p>
+
+<p>
+  <strong>Security agent:</strong>
+  <%= @agent_schedule.security_agent %>
+</p>
+
+<p>
+  <strong>Contract:</strong>
+  <%= @agent_schedule.contract %>
+</p>
+
+<%= link_to 'Edit', edit_agent_schedule_path(@agent_schedule) %> |
+<%= link_to 'Back', agent_schedules_path %>

@@ -1,0 +1,2 @@
+class EventStatus < ApplicationRecord
+end

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Asset Stocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stock name</th>
+      <th>Manager</th>
+      <th>Last update</th>
+      <th>Asset stock status</th>
+      <th>Asset</th>
+      <th>Community</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asset_stocks.each do |asset_stock| %>
+      <tr>
+        <td><%= asset_stock.stock_name %></td>
+        <td><%= asset_stock.manager %></td>
+        <td><%= asset_stock.last_update %></td>
+        <td><%= asset_stock.asset_stock_status %></td>
+        <td><%= asset_stock.asset %></td>
+        <td><%= asset_stock.community %></td>
+        <td><%= link_to 'Show', asset_stock %></td>
+        <td><%= link_to 'Edit', edit_asset_stock_path(asset_stock) %></td>
+        <td><%= link_to 'Destroy', asset_stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asset Stock', new_asset_stock_path %>

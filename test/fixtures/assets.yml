@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  notes: MyString
+  entry_date: 2018-08-12
+  quantity: 1
+  location: MyString
+  asset_status: one
+  who: MyString
+
+two:
+  name: MyString
+  notes: MyString
+  entry_date: 2018-08-12
+  quantity: 1
+  location: MyString
+  asset_status: two
+  who: MyString

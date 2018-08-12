@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  item_status: one
+  amount: 1
+  characteristics: MyString
+  accountable: MyString
+  endowment: one
+  item_type: one
+
+two:
+  name: MyString
+  item_status: two
+  amount: 1
+  characteristics: MyString
+  accountable: MyString
+  endowment: two
+  item_type: two

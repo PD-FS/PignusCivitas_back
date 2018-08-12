@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @event.notes %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @event.hour %>
+</p>
+
+<p>
+  <strong>Reported by:</strong>
+  <%= @event.reported_by %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @event.site %>
+</p>
+
+<p>
+  <strong>Facts:</strong>
+  <%= @event.facts %>
+</p>
+
+<p>
+  <strong>Event status:</strong>
+  <%= @event.event_status %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @event.end_date %>
+</p>
+
+<p>
+  <strong>End hour:</strong>
+  <%= @event.end_hour %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @event.contact_name %>
+</p>
+
+<p>
+  <strong>Contact phone:</strong>
+  <%= @event.contact_phone %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @event.community %>
+</p>
+
+<p>
+  <strong>Event type:</strong>
+  <%= @event.event_type %>
+</p>
+
+<p>
+  <strong>Security agent:</strong>
+  <%= @event.security_agent %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

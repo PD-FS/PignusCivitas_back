@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @security_agent_role.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @security_agent_role.description %>
+</p>
+
+<%= link_to 'Edit', edit_security_agent_role_path(@security_agent_role) %> |
+<%= link_to 'Back', security_agent_roles_path %>

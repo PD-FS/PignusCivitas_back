@@ -1,0 +1,57 @@
+<%= form_with(model: alert, local: true) do |form| %>
+  <% if alert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alert.errors.count, "error") %> prohibited this alert from being saved:</h2>
+
+      <ul>
+      <% alert.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :creation_date %>
+    <%= form.date_select :creation_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alert_status_id %>
+    <%= form.text_field :alert_status_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coordinates %>
+    <%= form.text_field :coordinates %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evidence %>
+    <%= form.text_field :evidence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :community_id %>
+    <%= form.text_field :community_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

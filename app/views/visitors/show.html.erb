@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Checkin date:</strong>
+  <%= @visitor.checkin_date %>
+</p>
+
+<p>
+  <strong>Checkout date:</strong>
+  <%= @visitor.checkout_date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @visitor.notes %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @visitor.destination %>
+</p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @visitor.vehicle %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @visitor.community %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @visitor.person %>
+</p>
+
+<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
+<%= link_to 'Back', visitors_path %>
