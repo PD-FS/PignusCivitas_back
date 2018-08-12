@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Visitors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Checkin date</th>
+      <th>Checkout date</th>
+      <th>Notes</th>
+      <th>Destination</th>
+      <th>Vehicle</th>
+      <th>Community</th>
+      <th>Person</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visitors.each do |visitor| %>
+      <tr>
+        <td><%= visitor.checkin_date %></td>
+        <td><%= visitor.checkout_date %></td>
+        <td><%= visitor.notes %></td>
+        <td><%= visitor.destination %></td>
+        <td><%= visitor.vehicle %></td>
+        <td><%= visitor.community %></td>
+        <td><%= visitor.person %></td>
+        <td><%= link_to 'Show', visitor %></td>
+        <td><%= link_to 'Edit', edit_visitor_path(visitor) %></td>
+        <td><%= link_to 'Destroy', visitor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Visitor', new_visitor_path %>

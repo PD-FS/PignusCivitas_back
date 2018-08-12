@@ -1,0 +1,2 @@
+module EndowmentStatusesHelper
+end

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Black Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Notes</th>
+      <th>Date</th>
+      <th>Black list status</th>
+      <th>Facts</th>
+      <th>Person</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @black_lists.each do |black_list| %>
+      <tr>
+        <td><%= black_list.notes %></td>
+        <td><%= black_list.date %></td>
+        <td><%= black_list.black_list_status %></td>
+        <td><%= black_list.facts %></td>
+        <td><%= black_list.person %></td>
+        <td><%= link_to 'Show', black_list %></td>
+        <td><%= link_to 'Edit', edit_black_list_path(black_list) %></td>
+        <td><%= link_to 'Destroy', black_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Black List', new_black_list_path %>

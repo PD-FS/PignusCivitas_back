@@ -1,0 +1,2 @@
+class CommunityType < ApplicationRecord
+end

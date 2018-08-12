@@ -1,0 +1,27 @@
+<%= form_with(model: agent_type, local: true) do |form| %>
+  <% if agent_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agent_type.errors.count, "error") %> prohibited this agent_type from being saved:</h2>
+
+      <ul>
+      <% agent_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

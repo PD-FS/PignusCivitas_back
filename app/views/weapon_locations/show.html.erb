@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @weapon_location.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @weapon_location.phone %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @weapon_location.contact %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @weapon_location.notes %>
+</p>
+
+<%= link_to 'Edit', edit_weapon_location_path(@weapon_location) %> |
+<%= link_to 'Back', weapon_locations_path %>

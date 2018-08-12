@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stock name:</strong>
+  <%= @asset_stock.stock_name %>
+</p>
+
+<p>
+  <strong>Manager:</strong>
+  <%= @asset_stock.manager %>
+</p>
+
+<p>
+  <strong>Last update:</strong>
+  <%= @asset_stock.last_update %>
+</p>
+
+<p>
+  <strong>Asset stock status:</strong>
+  <%= @asset_stock.asset_stock_status %>
+</p>
+
+<p>
+  <strong>Asset:</strong>
+  <%= @asset_stock.asset %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @asset_stock.community %>
+</p>
+
+<%= link_to 'Edit', edit_asset_stock_path(@asset_stock) %> |
+<%= link_to 'Back', asset_stocks_path %>

@@ -1,0 +1,2 @@
+class AlertStatus < ApplicationRecord
+end

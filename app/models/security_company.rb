@@ -1,0 +1,2 @@
+class SecurityCompany < ApplicationRecord
+end

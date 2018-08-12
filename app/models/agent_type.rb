@@ -1,0 +1,2 @@
+class AgentType < ApplicationRecord
+end

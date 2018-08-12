@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stock_name: MyString
+  manager: MyString
+  last_update: 2018-08-12
+  asset_stock_status: one
+  asset: one
+  community: one
+
+two:
+  stock_name: MyString
+  manager: MyString
+  last_update: 2018-08-12
+  asset_stock_status: two
+  asset: two
+  community: two

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Weapon Locations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Contact</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weapon_locations.each do |weapon_location| %>
+      <tr>
+        <td><%= weapon_location.name %></td>
+        <td><%= weapon_location.phone %></td>
+        <td><%= weapon_location.contact %></td>
+        <td><%= weapon_location.notes %></td>
+        <td><%= link_to 'Show', weapon_location %></td>
+        <td><%= link_to 'Edit', edit_weapon_location_path(weapon_location) %></td>
+        <td><%= link_to 'Destroy', weapon_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weapon Location', new_weapon_location_path %>

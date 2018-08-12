@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @member_type_member.member %>
+</p>
+
+<p>
+  <strong>Member type:</strong>
+  <%= @member_type_member.member_type %>
+</p>
+
+<%= link_to 'Edit', edit_member_type_member_path(@member_type_member) %> |
+<%= link_to 'Back', member_type_members_path %>

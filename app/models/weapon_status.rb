@@ -1,0 +1,2 @@
+class WeaponStatus < ApplicationRecord
+end

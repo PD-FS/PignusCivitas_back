@@ -1,0 +1,2 @@
+module SecurityCompaniesHelper
+end

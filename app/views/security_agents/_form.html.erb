@@ -1,0 +1,62 @@
+<%= form_with(model: security_agent, local: true) do |form| %>
+  <% if security_agent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(security_agent.errors.count, "error") %> prohibited this security_agent from being saved:</h2>
+
+      <ul>
+      <% security_agent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :security_agent_role_id %>
+    <%= form.text_field :security_agent_role_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :division %>
+    <%= form.text_field :division %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admission_date %>
+    <%= form.date_select :admission_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :security_company_id %>
+    <%= form.text_field :security_company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :security_agent_id %>
+    <%= form.text_field :security_agent_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weapon_id %>
+    <%= form.text_field :weapon_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agent_type_id %>
+    <%= form.text_field :agent_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :schedule_id %>
+    <%= form.text_field :schedule_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :person_id %>
+    <%= form.text_field :person_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

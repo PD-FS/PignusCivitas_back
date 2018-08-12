@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  date: 2018-08-12
+  expiration: 2018-08-12
+  type: 
+  notes: MyString
+  contractor: MyString
+  hired: MyString
+  contract_status: one
+  community: one
+  security_company: one
+
+two:
+  title: MyString
+  date: 2018-08-12
+  expiration: 2018-08-12
+  type: 
+  notes: MyString
+  contractor: MyString
+  hired: MyString
+  contract_status: two
+  community: two
+  security_company: two

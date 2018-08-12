@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Endowment Statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @endowment_statuses.each do |endowment_status| %>
+      <tr>
+        <td><%= endowment_status.name %></td>
+        <td><%= endowment_status.description %></td>
+        <td><%= link_to 'Show', endowment_status %></td>
+        <td><%= link_to 'Edit', edit_endowment_status_path(endowment_status) %></td>
+        <td><%= link_to 'Destroy', endowment_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Endowment Status', new_endowment_status_path %>

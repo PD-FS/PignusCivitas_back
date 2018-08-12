@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Security Companies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Business name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Identification</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @security_companies.each do |security_company| %>
+      <tr>
+        <td><%= security_company.business_name %></td>
+        <td><%= security_company.address %></td>
+        <td><%= security_company.phone %></td>
+        <td><%= security_company.email %></td>
+        <td><%= security_company.identification %></td>
+        <td><%= link_to 'Show', security_company %></td>
+        <td><%= link_to 'Edit', edit_security_company_path(security_company) %></td>
+        <td><%= link_to 'Destroy', security_company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Security Company', new_security_company_path %>

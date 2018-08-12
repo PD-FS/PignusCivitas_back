@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Communities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Admin address</th>
+      <th>Email</th>
+      <th>Website</th>
+      <th>Attendant</th>
+      <th>Notes</th>
+      <th>Postal code</th>
+      <th>Community</th>
+      <th>Community type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @communities.each do |community| %>
+      <tr>
+        <td><%= community.name %></td>
+        <td><%= community.address %></td>
+        <td><%= community.phone %></td>
+        <td><%= community.admin_address %></td>
+        <td><%= community.email %></td>
+        <td><%= community.webSite %></td>
+        <td><%= community.attendant %></td>
+        <td><%= community.notes %></td>
+        <td><%= community.postal_code %></td>
+        <td><%= community.community %></td>
+        <td><%= community.community_type %></td>
+        <td><%= link_to 'Show', community %></td>
+        <td><%= link_to 'Edit', edit_community_path(community) %></td>
+        <td><%= link_to 'Destroy', community, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Community', new_community_path %>

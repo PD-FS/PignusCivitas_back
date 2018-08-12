@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  notes: MyString
+  date: 2018-08-12
+  hour: 2018-08-12 13:48:41
+  reported_by: MyString
+  site: MyString
+  facts: MyString
+  event_status: one
+  location: MyString
+  end_date: 2018-08-12
+  end_hour: 2018-08-12 13:48:41
+  contact_name: MyString
+  contact_phone: MyString
+  community: one
+  event_type: one
+  security_agent: one
+
+two:
+  title: MyString
+  notes: MyString
+  date: 2018-08-12
+  hour: 2018-08-12 13:48:41
+  reported_by: MyString
+  site: MyString
+  facts: MyString
+  event_status: two
+  location: MyString
+  end_date: 2018-08-12
+  end_hour: 2018-08-12 13:48:41
+  contact_name: MyString
+  contact_phone: MyString
+  community: two
+  event_type: two
+  security_agent: two

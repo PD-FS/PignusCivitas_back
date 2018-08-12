@@ -1,0 +1,2 @@
+module AlertCommunitiesHelper
+end

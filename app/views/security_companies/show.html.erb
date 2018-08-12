@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @security_company.business_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @security_company.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @security_company.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @security_company.email %>
+</p>
+
+<p>
+  <strong>Identification:</strong>
+  <%= @security_company.identification %>
+</p>
+
+<%= link_to 'Edit', edit_security_company_path(@security_company) %> |
+<%= link_to 'Back', security_companies_path %>

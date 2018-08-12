@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @layout.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @layout.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @layout.phone %>
+</p>
+
+<p>
+  <strong>Attendant:</strong>
+  <%= @layout.attendant %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @layout.community %>
+</p>
+
+<%= link_to 'Edit', edit_layout_path(@layout) %> |
+<%= link_to 'Back', layouts_path %>

@@ -1,0 +1,2 @@
+class BlackListStatus < ApplicationRecord
+end

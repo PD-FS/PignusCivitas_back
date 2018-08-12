@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agent Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agent_types.each do |agent_type| %>
+      <tr>
+        <td><%= agent_type.name %></td>
+        <td><%= agent_type.type %></td>
+        <td><%= link_to 'Show', agent_type %></td>
+        <td><%= link_to 'Edit', edit_agent_type_path(agent_type) %></td>
+        <td><%= link_to 'Destroy', agent_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agent Type', new_agent_type_path %>

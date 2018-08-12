@@ -1,0 +1,42 @@
+<%= form_with(model: minute_book, local: true) do |form| %>
+  <% if minute_book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(minute_book.errors.count, "error") %> prohibited this minute_book from being saved:</h2>
+
+      <ul>
+      <% minute_book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :generated_by %>
+    <%= form.text_field :generated_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_field :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.text_field :file %>
+  </div>
+
+  <div class="field">
+    <%= form.label :community_id %>
+    <%= form.text_field :community_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

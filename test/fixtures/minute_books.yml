@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-08-12
+  generated_by: MyString
+  notes: MyString
+  file: MyString
+  community: one
+
+two:
+  date: 2018-08-12
+  generated_by: MyString
+  notes: MyString
+  file: MyString
+  community: two

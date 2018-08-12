@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Staff:</strong>
+  <%= @community_staff.staff %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @community_staff.community %>
+</p>
+
+<%= link_to 'Edit', edit_community_staff_path(@community_staff) %> |
+<%= link_to 'Back', community_staffs_path %>

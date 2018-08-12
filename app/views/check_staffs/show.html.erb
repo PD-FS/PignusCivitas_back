@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Entry date:</strong>
+  <%= @check_staff.entry_date %>
+</p>
+
+<p>
+  <strong>Exit date:</strong>
+  <%= @check_staff.exit_date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @check_staff.notes %>
+</p>
+
+<p>
+  <strong>Staff:</strong>
+  <%= @check_staff.staff %>
+</p>
+
+<%= link_to 'Edit', edit_check_staff_path(@check_staff) %> |
+<%= link_to 'Back', check_staffs_path %>

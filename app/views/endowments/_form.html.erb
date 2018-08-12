@@ -1,0 +1,42 @@
+<%= form_with(model: endowment, local: true) do |form| %>
+  <% if endowment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(endowment.errors.count, "error") %> prohibited this endowment from being saved:</h2>
+
+      <ul>
+      <% endowment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :stock_name %>
+    <%= form.text_field :stock_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :accountable %>
+    <%= form.text_field :accountable %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endowment_status_id %>
+    <%= form.text_field :endowment_status_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contract_id %>
+    <%= form.text_field :contract_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

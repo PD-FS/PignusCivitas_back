@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Security Agents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security agent role</th>
+      <th>Division</th>
+      <th>Admission date</th>
+      <th>Security company</th>
+      <th>Security agent</th>
+      <th>Weapon</th>
+      <th>Agent type</th>
+      <th>Schedule</th>
+      <th>Person</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @security_agents.each do |security_agent| %>
+      <tr>
+        <td><%= security_agent.security_agent_role %></td>
+        <td><%= security_agent.division %></td>
+        <td><%= security_agent.admission_date %></td>
+        <td><%= security_agent.security_company %></td>
+        <td><%= security_agent.security_agent %></td>
+        <td><%= security_agent.weapon %></td>
+        <td><%= security_agent.agent_type %></td>
+        <td><%= security_agent.schedule %></td>
+        <td><%= security_agent.person %></td>
+        <td><%= link_to 'Show', security_agent %></td>
+        <td><%= link_to 'Edit', edit_security_agent_path(security_agent) %></td>
+        <td><%= link_to 'Destroy', security_agent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Security Agent', new_security_agent_path %>

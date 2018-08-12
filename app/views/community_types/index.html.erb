@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Community Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @community_types.each do |community_type| %>
+      <tr>
+        <td><%= community_type.name %></td>
+        <td><%= community_type.description %></td>
+        <td><%= link_to 'Show', community_type %></td>
+        <td><%= link_to 'Edit', edit_community_type_path(community_type) %></td>
+        <td><%= link_to 'Destroy', community_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Community Type', new_community_type_path %>

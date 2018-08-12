@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Entry date:</strong>
+  <%= @check_vehicle.entry_date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @check_vehicle.notes %>
+</p>
+
+<p>
+  <strong>Exit date:</strong>
+  <%= @check_vehicle.exit_date %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @check_vehicle.cost %>
+</p>
+
+<p>
+  <strong>Check vehicle status:</strong>
+  <%= @check_vehicle.check_vehicle_status %>
+</p>
+
+<p>
+  <strong>Station:</strong>
+  <%= @check_vehicle.station %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @check_vehicle.community %>
+</p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @check_vehicle.vehicle %>
+</p>
+
+<%= link_to 'Edit', edit_check_vehicle_path(@check_vehicle) %> |
+<%= link_to 'Back', check_vehicles_path %>

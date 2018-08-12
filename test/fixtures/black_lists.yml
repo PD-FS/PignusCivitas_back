@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  notes: MyString
+  date: 2018-08-12
+  black_list_status: one
+  facts: MyString
+  person: one
+
+two:
+  notes: MyString
+  date: 2018-08-12
+  black_list_status: two
+  facts: MyString
+  person: two
