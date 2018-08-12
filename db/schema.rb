@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_12_184901) do
+ActiveRecord::Schema.define(version: 2018_08_12_211830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -169,10 +169,10 @@ ActiveRecord::Schema.define(version: 2018_08_12_184901) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.bigint "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["country_id"], name: "index_cities_on_country_id"
+    t.integer "department_id"
+    t.index ["department_id"], name: "index_cities_on_department_id"
     t.index ["name"], name: "index_cities_on_name", unique: true
   end
 
@@ -251,6 +251,15 @@ ActiveRecord::Schema.define(version: 2018_08_12_184901) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_day_of_weeks_on_name", unique: true
+  end
+
+  create_table "departments", force: :cascade do |t|
+    t.string "name"
+    t.bigint "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_departments_on_country_id"
+    t.index ["name"], name: "index_departments_on_name", unique: true
   end
 
   create_table "endowment_statuses", force: :cascade do |t|
@@ -604,7 +613,7 @@ ActiveRecord::Schema.define(version: 2018_08_12_184901) do
   add_foreign_key "check_vehicles", "check_vehicle_statuses"
   add_foreign_key "check_vehicles", "communities"
   add_foreign_key "check_vehicles", "vehicles"
-  add_foreign_key "cities", "countries"
+  add_foreign_key "cities", "departments"
   add_foreign_key "communities", "communities"
   add_foreign_key "communities", "community_types"
   add_foreign_key "community_staffs", "communities"
@@ -612,6 +621,7 @@ ActiveRecord::Schema.define(version: 2018_08_12_184901) do
   add_foreign_key "contracts", "communities"
   add_foreign_key "contracts", "contract_statuses"
   add_foreign_key "contracts", "security_companies"
+  add_foreign_key "departments", "countries"
   add_foreign_key "endowments", "contracts"
   add_foreign_key "events", "communities"
   add_foreign_key "events", "event_statuses"

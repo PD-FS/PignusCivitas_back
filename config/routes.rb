@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :departments
   resources :agent_schedules
   resources :community_staffs
   resources :alert_communities

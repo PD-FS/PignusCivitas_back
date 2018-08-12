@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# ruby encoding: utf-8
+
+# Destroy Tables
+
+City.destroy_all
+Country.destroy_all
+
+## Countries
+
+country_list = [
+    "Colombia"
+]
+
+country_list.each do |name|
+    Country.create( name: name )
+end
+
+## Cities
+
+cities_list = [
+    [ "Bogotá", Country.where(:name => 'Colombia').pluck(:id)[0]]
+]
+
+cities_list.each do |name, country_id|
+    City.create(name: name , country_id: country_id)
+end
