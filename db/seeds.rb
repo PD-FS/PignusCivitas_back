@@ -11,6 +11,7 @@
 # Destroy Tables
 
 City.destroy_all
+Department.destroy_all
 Country.destroy_all
 
 ## Countries
@@ -23,12 +24,22 @@ country_list.each do |name|
     Country.create( name: name )
 end
 
+## Departments
+
+department_list = [
+    ["Cundinamarca", Country.where(:name => 'Colombia').pluck(:id)[0]]
+]
+
+department_list.each do |name, country_id|
+    Department.create(name: name, country_id: country_id)
+end
+
 ## Cities
 
 cities_list = [
-    [ "Bogotá", Country.where(:name => 'Colombia').pluck(:id)[0]]
+    [ "Bogotá", Department.where(:name => 'Cundinamarca').pluck(:id)[0]]
 ]
 
-cities_list.each do |name, country_id|
-    City.create(name: name , country_id: country_id)
+cities_list.each do |name, department_id|
+    City.create(name: name, department_id: department_id)
 end
