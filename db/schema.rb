@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_12_211830) do
+ActiveRecord::Schema.define(version: 2018_08_13_014946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -173,7 +173,6 @@ ActiveRecord::Schema.define(version: 2018_08_12_211830) do
     t.datetime "updated_at", null: false
     t.integer "department_id"
     t.index ["department_id"], name: "index_cities_on_department_id"
-    t.index ["name"], name: "index_cities_on_name", unique: true
   end
 
   create_table "communities", force: :cascade do |t|
@@ -259,7 +258,6 @@ ActiveRecord::Schema.define(version: 2018_08_12_211830) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["country_id"], name: "index_departments_on_country_id"
-    t.index ["name"], name: "index_departments_on_name", unique: true
   end
 
   create_table "endowment_statuses", force: :cascade do |t|

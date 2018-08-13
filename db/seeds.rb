@@ -8,6 +8,8 @@
 
 # ruby encoding: utf-8
 
+require 'json'
+
 # Destroy Tables
 
 City.destroy_all
@@ -24,22 +26,14 @@ country_list.each do |name|
     Country.create( name: name )
 end
 
-## Departments
+## Colombia Departments and Cities
 
-department_list = [
-    ["Cundinamarca", Country.where(:name => 'Colombia').pluck(:id)[0]]
-]
+file = File.read(Rails.root.join('db','json','colombia.min.json'))
+colombia = JSON.parse(file)
 
-department_list.each do |name, country_id|
-    Department.create(name: name, country_id: country_id)
-end
-
-## Cities
-
-cities_list = [
-    [ "Bogotá", Department.where(:name => 'Cundinamarca').pluck(:id)[0]]
-]
-
-cities_list.each do |name, department_id|
-    City.create(name: name, department_id: department_id)
+colombia.each do |d|
+    Department.create(name: d["departamento"], country_id: Country.where(:name => 'Colombia').pluck(:id)[0])
+    d["ciudades"].each do |c|
+        City.create(name: c, department_id: Department.where(:name => d["departamento"]).pluck(:id)[0])
+    end
 end
