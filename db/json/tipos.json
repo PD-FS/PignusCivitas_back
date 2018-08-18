@@ -1,0 +1,174 @@
+[
+    {
+        "Entity": "VehicleType", 
+        "Rows": 
+        [
+            {
+                "name": "Automóvil",
+                "description": "Vehículo automotor destinado al transporte de no más de cinco (5) pasajeros."
+            },
+            {    
+                "name": "Bus",
+                "description": "Vehículo automotor destinado al transporte de personas y sus equipajes, debidamente registrado conforme a las normas y características especiales vigentes, con capacidad de más de 30 pasajeros."
+            },
+            {
+
+                "name": "Buseta",
+                "description": "Vehículo automotor destinado al transporte de personas y sus equipajes con capacidad de 20 a 30 pasajeros y distancia entre ejes inferiores a 4 metros."
+            },
+            {
+                "name": "Camión",
+                "description": "Vehículo automotor que por su tamaño y destinación se usa para transportar carga, con peso bruto vehicular del fabricante superior a 5 (cinco) toneladas."
+            },
+            {
+                "name":"Camioneta",
+                "description": "Vehículo automotor destinado al transporte de pasajeros y/o carga con capacidad de no más de nueve (9) pasajeros y hasta 5 (Cinco) toneladas de peso bruto vehicular del fabricante."
+            },
+            {
+                "name": "Campero",
+                "description": "Vehículo automotor con tracción en todas sus ruedas, con capacidad hasta de nueve (9) pasajeros o tres cuartos (3/4) de tonelada."
+            },
+            {
+                "name": "Tractocamión (Camión tractor)",
+                "description": "Vehículo automotor destinado a arrastrar uno o varios semi-rremolques o remolques, equipado con acople adecuado para tal fin."
+            },
+            {
+                "name": "Cuatrimoto",
+                "description": "Vehículo automotor de cuatro (4) ruedas con componentes mecánicos de motocicleta, para transporte de personas o mercancías con capacidad de carga de hasta setecientos setenta (770) kilogramos."
+            },
+            {
+                "name": "Microbús",
+                "description": "Vehículo destinado al transporte de personas con capacidad de 10 a 19 pasajeros."
+            },
+            {
+                "name": "Motocarro",
+                "description": "Vehículo automotor de tres ruedas con estabilidad propia con componentes mecánicos de motocicleta, para el transporte de personas o mercancías con capacidad útil hasta 770 kilogramos."
+            },
+            {
+                "name": "Motocicleta",
+                "description": "Vehículo automotor de dos ruedas en línea, con capacidad para el conductor y un acompañante"
+            },
+            {
+                "name": "Mototriciclo",
+                "description": "Vehículo automotor de tres ruedas con estabilidad propia y capacidad para el conductor y un acompañante del tipo SideCar y recreativo."
+            },
+            {
+                "name": "Volqueta",
+                "description": "Automotor destinado principalmente al transporte de materiales de construcción, provisto de una caja que se puede vaciar por giro transversal o vertical sobre uno o más ejes."
+            }
+        ]
+            
+    },
+    {
+        "Entity": "ItemType",
+        "Rows":
+        [
+            {
+                "name": "Dotación",
+                "description": "calzado y prendas de vestir apropiadas para el buen desempeño de las labores contratadas."
+            },
+            {
+                "name": "Elemento Protección Personal",
+                "description": "Son equipos, dispositivos, aparatos que deben usar los trabajadores con el fin de proteger  su  vida  y  su  salud  al  constituirse un  importante  recurso  para  el  control  de riesgos laborales. "
+            }
+        ]
+    },
+    {
+        "Entity": "MemberType",
+        "Rows": 
+        [
+            {
+                "name": "Residente",
+                "description": "Persona que habita o con domicilio en la comunidad"
+            },
+            {
+                "name": "Visitante",
+                "description": "Persona que permanece temporalmente en una comunidad y cuya permanencia es autorizada por un residente"
+            }
+        ]
+    },
+    {
+        "Entity": "AgentType",
+        "Rows": 
+        [
+            {
+                "name": "Vigilante de Seguridad",
+                "description": "Es la persona natural que en la prestación del servicio se le ha encomendado como labor Proteger, custodiar, efectuar controles de identidad en el acceso o en el interior de inmuebles determinados y vigilar bienes muebles e inmuebles de cualquier naturaleza, de personas naturales o jurídicas, de derecho público o privado a fin de prevenir, detener, disminuir o disuadir los atentados o amenazas que puedan afectarlos en su seguridad"
+            },
+            {
+                "name": "Supervisor",
+                "description": "Encargado de la gestión de un grupo de Vigilantes de Seguridad"
+            }
+        ]
+    },
+    {
+        "Entity": "EventType",
+        "Rows": 
+        [
+            {
+                "name": "Notificación",
+                "description": ""
+            },
+            {
+                "name": "Incidente",
+                "description": ""
+            },
+            {
+                "name": "Alerta",
+                "description": ""
+            },
+            {
+                "name": "Novedad",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "Entity": "WeaponType",
+        "Rows": 
+        [
+            {
+                "name": "Accesorios",
+                "description": "Complementos empleados para el uso de cualquier tipo de arma"
+            },
+            {
+                "name": "Armas de Fuego",
+                "description": ""
+            },
+            {
+                "name": "Armas de Defensa Personal",
+                "description": ""
+            },
+            {
+                "name": "Municiones",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "Entity": "StaffJob",
+        "Rows": 
+        [
+            {
+                "name": "Secretaria",
+                "description": "Secretaria"
+            },
+            {
+                "name": "Todero",
+                "description": "Persona encargada de realizar el mantenimiento de diversos sistemas de la infraestructura de una comunidad"
+            },
+            {
+                "name": "Auxiliar",
+                "description": "Auxiliar"
+            },
+            {
+                "name": "Asistente",
+                "description": "Asistente"
+            },
+            {
+                "name": "Técnico",
+                "description": "Técnico"
+            }
+        ]
+    }
+]

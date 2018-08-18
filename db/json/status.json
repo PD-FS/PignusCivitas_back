@@ -1,0 +1,112 @@
+[
+    {
+        "Entity": "EventStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    },
+    {
+        "Entity": "ContractStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    },
+    {
+        "Entity": "AlertStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    },
+    {
+        "Entity": "EndowmentStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    },
+    {
+        "Entity": "CheckVehicleStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    },
+    {
+        "Entity": "AssetStockStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    },
+    {
+        "Entity": "WeaponStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    },
+    {
+        "Entity": "BlackListStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    },
+    {
+        "Entity": "AssetStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    },
+    {
+        "Entity": "ItemStatus",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": "",
+            },
+
+        ]
+    }
+]
