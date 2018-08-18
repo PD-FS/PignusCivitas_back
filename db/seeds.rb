@@ -16,6 +16,14 @@ City.destroy_all
 Department.destroy_all
 Country.destroy_all
 
+## Destroy types
+file = File.read(Rails.root.join('db','json','types.json'))
+types = JSON.parse(file)
+
+types.each do |type|
+    type["Entity"].constantize.destroy_all    
+end
+
 ## Countries
 
 country_list = [
