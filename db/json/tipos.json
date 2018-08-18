@@ -82,6 +82,10 @@
                 "description": "Persona que habita o con domicilio en la comunidad"
             },
             {
+                "name": "Propietario",
+                "description": "Copropietario de una comunidad"
+            },
+            {
                 "name": "Visitante",
                 "description": "Persona que permanece temporalmente en una comunidad y cuya permanencia es autorizada por un residente"
             }
@@ -115,11 +119,19 @@
             },
             {
                 "name": "Alerta",
-                "description": "Incidente de interés crítico para la comunidad"
+                "description": "Mensaje de precaución antes de la ocurrencia de un incidente"
             },
             {
                 "name": "Novedad",
                 "description": "Situaciones regurales encontradas durante el servicio de vigilancia; puede ser de interés general o no para la comunidad"
+            },
+            {
+                "name": "Catástrofe",
+                "description": "Incidente o accidente provocado por la naturaleza;  es de interés general para la comunidad"
+            },
+            {
+                "name": "Accidente",
+                "description": "Incidente que involucra heridos o decesos de interés general para la comunidad"
             }
         ]
     },
@@ -133,15 +145,15 @@
             },
             {
                 "name": "Armas de Fuego",
-                "description": ""
+                "description": "Armas de Fuego"
             },
             {
                 "name": "Armas de Defensa Personal",
-                "description": ""
+                "description": "Armas de Defensa Personal"
             },
             {
                 "name": "Municiones",
-                "description": ""
+                "description": "Municiones"
             }
         ]
     },
@@ -150,20 +162,20 @@
         "Rows": 
         [
             {
-                "name": "",
-                "description": ""
+                "name": "Conjunto residencial",
+                "description": "Conjunto residencial"
             },
             {
-                "name": "",
-                "description": ""
+                "name": "Centro Comercial",
+                "description": "Centro Comercial"
             },
             {
-                "name": "",
-                "description": ""
+                "name": "Edificio Oficinas",
+                "description": "Edificio Oficinas"
             },
             {
-                "name": "",
-                "description": ""
+                "name": "Hospital",
+                "description": "Hospital"
             }
         ]
     },
@@ -181,7 +193,7 @@
             },
             {
                 "name": "Auxiliar",
-                "description": "Auxiliar"
+                "description": "Auxiliar con algún tipo de especialidad"
             },
             {
                 "name": "Asistente",
@@ -190,6 +202,14 @@
             {
                 "name": "Técnico",
                 "description": "Técnico"
+            },
+            {
+                "name": "Revisor Fiscal",
+                "description": "Revisor Fiscal"
+            },
+            {
+                "name": "Administrador",
+                "description": "Representante legal de la comunidad"
             }
         ]
     }
