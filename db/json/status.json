@@ -4,10 +4,17 @@
         "Rows": 
         [
             {
-                "name": "",
+                "name": "Privado",
                 "description": ""
             },
-
+            {
+                "name": "Editada",
+                "description": "Editado"
+            },
+            {
+                "name": "Público",
+                "description": "No visible para la comunidad"
+            }
         ]
     },
     {
@@ -24,7 +31,7 @@
             },
             {
                 "name": "Finalizado",
-                "description": "Actividades completadas o eliminadas"
+                "description": "Actividades completadas o caducadas"
             }
         ]
     },
@@ -32,20 +39,23 @@
         "Entity": "AlertStatus",
         "Rows": 
         [
-            {
-                "name": "",
-                "description": ""
-            },
-
+        {
+            "name": "Confirmada",
+            "description": "Es visible"
+        },
+        {
+            "name": "Por confirmar",
+            "description": "No visible"
+        }
         ]
     },
     {
-        "Entity": "EndowmentStatus",
+        "Entity": "ItemStatus",
         "Rows": 
         [
             {
                 "name": "Pedido",
-                "description": "Solicitado al área de Gestión Humana"
+                "description": "Solicitado al área de Gestión Humana de la Empresa de Seguridad"
             },
             {
                 "name": "Entregado",
@@ -53,7 +63,7 @@
             },
             {
                 "name": "Devuelto",
-                "description": "Retornado y bajo la responsabilidad del área de gestión humana"
+                "description": "Retornado y bajo la responsabilidad del área de Gestión Humana de la Empresa de Seguridad"
             }
         ]
     },
@@ -67,7 +77,7 @@
             },
             {
                 "name": "Retirado",
-                "description": "Se encuentra afuera de la comunidad por parte de un residente autorizado"
+                "description": "Se encuentra afuera de la comunidad debido a la acción ejecutada por parte de un residente o visitante autorizado"
             },
             {
                 "name": "Custodia externa",
@@ -81,7 +91,7 @@
         [
             {
                 "name": "Activo",
-                "description": "Y en estado óptimo"
+                "description": "En estado óptimo"
             },
             {
                 "name": "Deteriorado",
@@ -98,10 +108,17 @@
         "Rows": 
         [
             {
-                "name": "",
-                "description": ""
+                "name": "Custodia",
+                "description": "Almacenado en algún sitio de acceso restringido"
             },
-
+            {
+                "name": "Asignada",
+                "description": "Bajo la responsabilidad de un Vigilante de Seguridad o Supervisor"
+            },
+            {
+                "name": "No disponible",
+                "description": "No se encuentra habilitado para su uso porque no funciona o en reparación"
+            }
         ]
     },
     {
@@ -136,19 +153,8 @@
             },
             {
                 "name": "No disponible",
-                "description": "No se encuentra habilitado para su uso"
+                "description": "No se encuentra habilitado para su uso porque no funciona o en reparación"
             }
-        ]
-    },
-    {
-        "Entity": "ItemStatus",
-        "Rows": 
-        [
-            {
-                "name": "",
-                "description": ""
-            },
-
         ]
     }
 ]
