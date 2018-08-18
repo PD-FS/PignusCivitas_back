@@ -107,19 +107,19 @@
         [
             {
                 "name": "Notificación",
-                "description": ""
+                "description": "Órdenes que se impartan con anterioridad a la toma del servicio"
             },
             {
                 "name": "Incidente",
-                "description": ""
+                "description": "Tipo de novedad con alguna clase de inconveniente; puede ser de interés general o no para la comunidad"
             },
             {
                 "name": "Alerta",
-                "description": ""
+                "description": "Incidente de interés crítico para la comunidad"
             },
             {
                 "name": "Novedad",
-                "description": ""
+                "description": "Situaciones regurales encontradas durante el servicio de vigilancia; puede ser de interés general o no para la comunidad"
             }
         ]
     },
@@ -141,6 +141,28 @@
             },
             {
                 "name": "Municiones",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "Entity": "CommunityType",
+        "Rows": 
+        [
+            {
+                "name": "",
+                "description": ""
+            },
+            {
+                "name": "",
+                "description": ""
+            },
+            {
+                "name": "",
+                "description": ""
+            },
+            {
+                "name": "",
                 "description": ""
             }
         ]

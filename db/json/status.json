@@ -5,7 +5,7 @@
         [
             {
                 "name": "",
-                "description": "",
+                "description": ""
             },
 
         ]
@@ -15,10 +15,17 @@
         "Rows": 
         [
             {
-                "name": "",
-                "description": "",
+                "name": "Activo",
+                "description": "En desarrollo de actividades"
             },
-
+            {
+                "name": "Suspendido",
+                "description": "Actividades temporalmente detenidas"
+            },
+            {
+                "name": "Finalizado",
+                "description": "Actividades completadas o eliminadas"
+            }
         ]
     },
     {
@@ -27,7 +34,7 @@
         [
             {
                 "name": "",
-                "description": "",
+                "description": ""
             },
 
         ]
@@ -37,10 +44,17 @@
         "Rows": 
         [
             {
-                "name": "",
-                "description": "",
+                "name": "Pedido",
+                "description": "Solicitado al área de Gestión Humana"
             },
-
+            {
+                "name": "Entregado",
+                "description": "Bajo la responsabilidad del Vigilante de Seguridad o Supervisor"
+            },
+            {
+                "name": "Devuelto",
+                "description": "Retornado y bajo la responsabilidad del área de gestión humana"
+            }
         ]
     },
     {
@@ -48,10 +62,17 @@
         "Rows": 
         [
             {
-                "name": "",
-                "description": "",
+                "name": "Ingresado",
+                "description": "Se encuentra dentro de la comunidad"
             },
-
+            {
+                "name": "Retirado",
+                "description": "Se encuentra afuera de la comunidad por parte de un residente autorizado"
+            },
+            {
+                "name": "Custodia externa",
+                "description": "Se encuentra afuera de la comunidad y en custodia de alguna autoridad o entidad responsable por el vehículo"
+            }
         ]
     },
     {
@@ -59,10 +80,17 @@
         "Rows": 
         [
             {
-                "name": "",
-                "description": "",
+                "name": "Activo",
+                "description": "Y en estado óptimo"
             },
-
+            {
+                "name": "Deteriorado",
+                "description": ""
+            },
+            {
+                "name": "Dado de baja",
+                "description": "En desuso"
+            }
         ]
     },
     {
@@ -71,7 +99,7 @@
         [
             {
                 "name": "",
-                "description": "",
+                "description": ""
             },
 
         ]
@@ -81,10 +109,13 @@
         "Rows": 
         [
             {
-                "name": "",
-                "description": "",
+                "name": "Activo",
+                "description": ""
             },
-
+            {
+                "name": "Desactivo",
+                "description": ""
+            }
         ]
     },
     {
@@ -92,10 +123,21 @@
         "Rows": 
         [
             {
-                "name": "",
-                "description": "",
+                "name": "Disponible",
+                "description": ""
             },
-
+            {
+                "name": "Custodia",
+                "description": "Almacenado en algún sitio de acceso restringido"
+            },
+            {
+                "name": "Préstamo",
+                "description": "Bajo la responsabilidad de un residente"
+            },
+            {
+                "name": "No disponible",
+                "description": "No se encuentra habilitado para su uso"
+            }
         ]
     },
     {
@@ -104,7 +146,7 @@
         [
             {
                 "name": "",
-                "description": "",
+                "description": ""
             },
 
         ]
