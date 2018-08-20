@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_014946) do
+ActiveRecord::Schema.define(version: 2018_08_20_205645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,11 +28,10 @@ ActiveRecord::Schema.define(version: 2018_08_13_014946) do
 
   create_table "agent_types", force: :cascade do |t|
     t.string "name"
-    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
     t.index ["name"], name: "index_agent_types_on_name", unique: true
-    t.index ["type"], name: "index_agent_types_on_type", unique: true
   end
 
   create_table "alert_communities", force: :cascade do |t|
@@ -521,6 +520,7 @@ ActiveRecord::Schema.define(version: 2018_08_13_014946) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
   end
 
   create_table "vehicles", force: :cascade do |t|
@@ -573,9 +573,9 @@ ActiveRecord::Schema.define(version: 2018_08_13_014946) do
 
   create_table "weapon_types", force: :cascade do |t|
     t.string "name"
-    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
     t.index ["name"], name: "index_weapon_types_on_name", unique: true
   end
 

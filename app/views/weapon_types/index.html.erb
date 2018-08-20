@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Type</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +15,7 @@
     <% @weapon_types.each do |weapon_type| %>
       <tr>
         <td><%= weapon_type.name %></td>
-        <td><%= weapon_type.type %></td>
+        <td><%= weapon_type.description %></td>
         <td><%= link_to 'Show', weapon_type %></td>
         <td><%= link_to 'Edit', edit_weapon_type_path(weapon_type) %></td>
         <td><%= link_to 'Destroy', weapon_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
