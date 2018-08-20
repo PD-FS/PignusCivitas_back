@@ -13,8 +13,29 @@ require 'json'
 # Destroy Tables
 
 City.destroy_all
+City.connection.execute('ALTER SEQUENCE cities_id_seq RESTART WITH 1')
 Department.destroy_all
+Department.connection.execute('ALTER SEQUENCE departments_id_seq RESTART WITH 1')
 Country.destroy_all
+Country.connection.execute('ALTER SEQUENCE countries_id_seq RESTART WITH 1')
+
+## Destroy types
+file_names_list = [
+    'types.json',
+    'status.json'
+]
+file_names_list.each do | file_name |
+    file = File.read(Rails.root.join('db','json',file_name))
+    types = JSON.parse(file)
+    types.each do |type|
+        type["Entity"].constantize.destroy_all
+        type["Entity"].constantize.connection.execute('ALTER SEQUENCE ' + type["Entity"].underscore.pluralize + '_id_seq RESTART WITH 1')
+        type["Rows"].each do | row |
+            
+            type["Entity"].constantize.create(name:row["name"], description:row["description"])
+        end
+    end
+end
 
 ## Countries
 

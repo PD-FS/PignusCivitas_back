@@ -1,0 +1,160 @@
+[
+    {
+        "Entity": "EventStatus",
+        "Rows": 
+        [
+            {
+                "name": "Privado",
+                "description": ""
+            },
+            {
+                "name": "Editada",
+                "description": "Editado"
+            },
+            {
+                "name": "Público",
+                "description": "No visible para la comunidad"
+            }
+        ]
+    },
+    {
+        "Entity": "ContractStatus",
+        "Rows": 
+        [
+            {
+                "name": "Activo",
+                "description": "En desarrollo de actividades"
+            },
+            {
+                "name": "Suspendido",
+                "description": "Actividades temporalmente detenidas"
+            },
+            {
+                "name": "Finalizado",
+                "description": "Actividades completadas o caducadas"
+            }
+        ]
+    },
+    {
+        "Entity": "AlertStatus",
+        "Rows": 
+        [
+        {
+            "name": "Confirmada",
+            "description": "Es visible"
+        },
+        {
+            "name": "Por confirmar",
+            "description": "No visible"
+        }
+        ]
+    },
+    {
+        "Entity": "ItemStatus",
+        "Rows": 
+        [
+            {
+                "name": "Pedido",
+                "description": "Solicitado al área de Gestión Humana de la Empresa de Seguridad"
+            },
+            {
+                "name": "Entregado",
+                "description": "Bajo la responsabilidad del Vigilante de Seguridad o Supervisor"
+            },
+            {
+                "name": "Devuelto",
+                "description": "Retornado y bajo la responsabilidad del área de Gestión Humana de la Empresa de Seguridad"
+            }
+        ]
+    },
+    {
+        "Entity": "CheckVehicleStatus",
+        "Rows": 
+        [
+            {
+                "name": "Ingresado",
+                "description": "Se encuentra dentro de la comunidad"
+            },
+            {
+                "name": "Retirado",
+                "description": "Se encuentra afuera de la comunidad debido a la acción ejecutada por parte de un residente o visitante autorizado"
+            },
+            {
+                "name": "Custodia externa",
+                "description": "Se encuentra afuera de la comunidad y en custodia de alguna autoridad o entidad responsable por el vehículo"
+            }
+        ]
+    },
+    {
+        "Entity": "AssetStockStatus",
+        "Rows": 
+        [
+            {
+                "name": "Activo",
+                "description": "En estado óptimo"
+            },
+            {
+                "name": "Deteriorado",
+                "description": ""
+            },
+            {
+                "name": "Dado de baja",
+                "description": "En desuso"
+            }
+        ]
+    },
+    {
+        "Entity": "WeaponStatus",
+        "Rows": 
+        [
+            {
+                "name": "Custodia",
+                "description": "Almacenado en algún sitio de acceso restringido"
+            },
+            {
+                "name": "Asignada",
+                "description": "Bajo la responsabilidad de un Vigilante de Seguridad o Supervisor"
+            },
+            {
+                "name": "No disponible",
+                "description": "No se encuentra habilitado para su uso porque no funciona o en reparación"
+            }
+        ]
+    },
+    {
+        "Entity": "BlackListStatus",
+        "Rows": 
+        [
+            {
+                "name": "Activo",
+                "description": ""
+            },
+            {
+                "name": "Desactivo",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "Entity": "AssetStatus",
+        "Rows": 
+        [
+            {
+                "name": "Disponible",
+                "description": ""
+            },
+            {
+                "name": "Custodia",
+                "description": "Almacenado en algún sitio de acceso restringido"
+            },
+            {
+                "name": "Préstamo",
+                "description": "Bajo la responsabilidad de un residente"
+            },
+            {
+                "name": "No disponible",
+                "description": "No se encuentra habilitado para su uso porque no funciona o en reparación"
+            }
+        ]
+    }
+]

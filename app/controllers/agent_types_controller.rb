@@ -69,6 +69,6 @@ class AgentTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agent_type_params
-      params.require(:agent_type).permit(:name, :type)
+      params.require(:agent_type).permit(:name, :description)
     end
 end
