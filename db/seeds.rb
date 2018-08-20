@@ -9,30 +9,47 @@
 # ruby encoding: utf-8
 
 require 'json'
+require 'set'
 
-# Destroy Tables
-
-City.destroy_all
-City.connection.execute('ALTER SEQUENCE cities_id_seq RESTART WITH 1')
-Department.destroy_all
-Department.connection.execute('ALTER SEQUENCE departments_id_seq RESTART WITH 1')
-Country.destroy_all
-Country.connection.execute('ALTER SEQUENCE countries_id_seq RESTART WITH 1')
-
-## Destroy types
 file_names_list = [
     'types.json',
     'status.json'
 ]
+
+# Json validations
+file_names_list.each do | file_name |
+    file = File.read(Rails.root.join('db','json',file_name))
+    types = JSON.parse(file)
+    types.each do |type|
+        type["Rows"].each do | row |
+            entidadesMalas = ""
+            if !(row.keys.to_set.subset?(type["Entity"].constantize.column_names.to_set))
+                entidadesMalas = entidadesMalas + type["Entity"] + ", "
+            end
+            if entidadesMalas != ""
+                raise "Error, los campos de las entidades " + entidadesMalas + " no concuerdan con el modelo"
+            end
+        end
+    end
+end
+
+# Destroy Tables
+City.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!(City.table_name)
+Department.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!(Department.table_name)
+Country.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!(Country.table_name)
+
+## Destroy types
 file_names_list.each do | file_name |
     file = File.read(Rails.root.join('db','json',file_name))
     types = JSON.parse(file)
     types.each do |type|
         type["Entity"].constantize.destroy_all
-        type["Entity"].constantize.connection.execute('ALTER SEQUENCE ' + type["Entity"].underscore.pluralize + '_id_seq RESTART WITH 1')
+        ActiveRecord::Base.connection.reset_pk_sequence!(type["Entity"].constantize.table_name)
         type["Rows"].each do | row |
-            
-            type["Entity"].constantize.create(name:row["name"], description:row["description"])
+            type["Entity"].constantize.create(row)
         end
     end
 end
