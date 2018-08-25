@@ -14,7 +14,8 @@ require 'set'
 file_names_list = [
     'types.json',
     'status.json',
-    'communities.json'
+    'communities.json',
+    'security_agent.json'
 ]
 
 # Json validations
@@ -36,6 +37,16 @@ file_names_list.each do | file_name |
     end
 end
 
+## Destroy types
+file_names_list.reverse_each do | file_name |
+    file = File.read(Rails.root.join('db','json',file_name))
+    types = JSON.parse(file)
+    types.reverse_each do |type|
+        type["Entity"].constantize.destroy_all
+        ActiveRecord::Base.connection.reset_pk_sequence!(type["Entity"].constantize.table_name)
+    end
+end
+
 # Destroy Tables
 City.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!(City.table_name)
@@ -43,29 +54,6 @@ Department.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!(Department.table_name)
 Country.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!(Country.table_name)
-
-## Destroy types
-file_names_list.reverse_each do | file_name |
-    file = File.read(Rails.root.join('db','json',file_name))
-    types = JSON.parse(file)
-    types.each do |type|
-        puts type["Entity"]
-        type["Entity"].constantize.destroy_all
-        ActiveRecord::Base.connection.reset_pk_sequence!(type["Entity"].constantize.table_name)
-    end
-end
-
-## Create types
-file_names_list.each do | file_name |
-    file = File.read(Rails.root.join('db','json',file_name))
-    types = JSON.parse(file)
-    types.each do |type|
-        type["Rows"].each do | row |
-            type["Entity"].constantize.create(row)
-        end
-    end
-end
-
 
 ## Countries
 
@@ -86,5 +74,16 @@ colombia.each do |d|
     Department.create(name: d["departamento"], country_id: Country.where(:name => 'Colombia').pluck(:id)[0])
     d["ciudades"].each do |c|
         City.create(name: c, department_id: Department.where(:name => d["departamento"]).pluck(:id)[0])
+    end
+end
+
+## Create types
+file_names_list.each do | file_name |
+    file = File.read(Rails.root.join('db','json',file_name))
+    types = JSON.parse(file)
+    types.each do |type|
+        type["Rows"].each do | row |
+            type["Entity"].constantize.create(row)
+        end
     end
 end
