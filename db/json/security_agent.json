@@ -1,0 +1,89 @@
+[
+    {
+        "Entity": "SecurityAgentRole",
+        "Rows": [
+            {
+                "name":"Administrativo",
+                "description":"Agente administrativo"
+            },
+            {
+                "name":"Supervisor",
+                "description":"Agente supervisor de contrato"
+            },
+            {
+                "name":"Coordinador",
+                "description":"Coordinador de seguridad y vigilancia"
+            },
+            {
+                "name":"Vigilante",
+                "description":"Agente de seguridad"
+            },
+            {
+                "name":"Escolta",
+                "description":"Agente de seguridad y protección personal"
+            }
+        ]
+    },
+    {
+        "Entity": "SecurityCompany",
+        "Rows": [
+            {
+                "business_name": "Seguridad Nápoles",
+                "address": "Calle 98 No. 13 - 10, Chico",
+                "phone": "(1)6160284",
+                "email": "contacto@seguridadnapoles.com",
+                "identification": "860523408-6"
+            }
+        ]
+    },
+    {
+        "Entity": "WeaponLocation",
+        "Rows": [
+            {
+                "name":"Armeria Nápoles",
+                "phone":"(1)6160284",
+                "contact":"Herán Jurado",
+                "notes":"Armería privada para Seguridad Nápoles"
+            }
+        ]
+    },
+    {
+        "Entity": "Weapon",
+        "Rows": [
+            {
+                "name":"Revolver",
+                "weapon_status_id":"2",
+                "notes":"Revólver calibre 38 SPL de 4 pulgadas",
+                "weapon_type_id":"2",
+                "weapon_location_id":"1"
+            }
+        ]
+    },
+    {
+        "Entity": "Person",
+        "Rows": [
+            {
+                "first_name":"Joaquín",
+                "last_name":"García",
+                "phone":"6854859",
+                "identification":"51586899",
+                "city_id":"495",
+                "home_address":"Calle 22b #13b-45",
+                "office_address":"Calle 98 No. 13 - 10, Chico"
+            }
+        ]
+    },
+    {
+        "Entity": "SecurityAgent",
+        "Rows": [
+            {
+                "security_agent_role_id":"4",
+                "division":"Seguridad canina",
+                "admission_date":"01/02/2010",
+                "security_company_id":"1",
+                "agent_type_id":"1",
+                "person_id":"1"
+            }
+        ]
+    }
+]
