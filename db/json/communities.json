@@ -1,0 +1,19 @@
+[
+    {
+        "Entity": "Community",
+        "Rows": [
+            {
+                "name": "Parque residencial calle 100",
+                "address": "Av. Calle 100 #42-97",
+                "phone": "(1)6165915",
+                "admin_address": "Av. Calle 100 #42-97",
+                "email": "conjuntocalle-100@hotmail.com",
+                "webSite": "http://conjuntocalle100.com/",
+                "attendant": "MÓNICA PATRICIA PEÑA MANJARREZ",
+                "notes": "Conjunto residencial ubicado al lado del centro comercial Iserra 100 sobre la Calle 100",
+                "postal_code": "111211",
+                "community_type_id": "1"
+            }
+        ]
+    }
+]
