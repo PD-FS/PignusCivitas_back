@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :black_list_status_id %>
-    <%= form.text_field :black_list_status_id %>
+    <%= collection_select(:black_list, :black_list_status_id, BlackListStatus.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :person_id %>
-    <%= form.text_field :person_id %>
+    <%= collection_select(:black_list, :person_id, Person.all, :id, :name_with_initial, prompt: true) %>
   </div>
 
   <div class="actions">

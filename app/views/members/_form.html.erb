@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= form.label :community_id %>
-    <%= form.text_field :community_id %>
+    <%= collection_select(:member, :community_id, Community.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :person_id %>
-    <%= form.text_field :person_id %>
+    <%= collection_select(:member, :person_id, Person.all, :id, :name_with_initial, prompt: true) %>
   </div>
 
   <div class="actions">

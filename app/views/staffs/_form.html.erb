@@ -38,17 +38,17 @@
 
   <div class="field">
     <%= form.label :staff_id %>
-    <%= form.text_field :staff_id %>
+    <%= collection_select(:staff, :staff_id, Staff.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :staff_job_id %>
-    <%= form.text_field :staff_job_id %>
+    <%= collection_select(:staff, :staff_job_id, StaffJob.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :community_id %>
-    <%= form.text_field :community_id %>
+    <%= collection_select(:staff, :community_id, Community.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="actions">

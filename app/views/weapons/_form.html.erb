@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :weapon_status_id %>
-    <%= form.text_field :weapon_status_id %>
+    <%= collection_select(:weapon, :weapon_status_id, WeaponStatus.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= form.label :weapon_type_id %>
-    <%= form.text_field :weapon_type_id %>
+    <%= collection_select(:weapon, :weapon_type_id, WeaponType.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :weapon_location_id %>
-    <%= form.text_field :weapon_location_id %>
+    <%= collection_select(:weapon, :weapon_location_id, WeaponLocation.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="actions">

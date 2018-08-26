@@ -6,4 +6,8 @@ class SecurityAgent < ApplicationRecord
   belongs_to :agent_type
   belongs_to :schedule, optional:true
   belongs_to :person
+
+  def name_with_initial
+    "#{person.first_name} #{person.last_name}"
+  end
 end

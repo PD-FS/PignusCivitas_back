@@ -13,12 +13,13 @@
 
   <div class="field">
     <%= form.label :member_id %>
-    <%= form.text_field :member_id %>
+    <%= collection_select(:member_type_member, :member_id, Member.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :member_type_id %>
     <%= form.text_field :member_type_id %>
+    <%= collection_select(:member_type_member, :member_type_id, MemberType.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="actions">
