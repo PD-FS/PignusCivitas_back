@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_205645) do
+ActiveRecord::Schema.define(version: 2018_08_26_150915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -271,11 +271,12 @@ ActiveRecord::Schema.define(version: 2018_08_20_205645) do
     t.string "stock_name"
     t.date "date"
     t.string "accountable"
-    t.string "endowment_status_id"
+    t.integer "endowment_status_id"
     t.bigint "contract_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["contract_id"], name: "index_endowments_on_contract_id"
+    t.index ["endowment_status_id"], name: "index_endowments_on_endowment_status_id"
   end
 
   create_table "event_statuses", force: :cascade do |t|
@@ -621,6 +622,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_205645) do
   add_foreign_key "contracts", "security_companies"
   add_foreign_key "departments", "countries"
   add_foreign_key "endowments", "contracts"
+  add_foreign_key "endowments", "endowment_statuses"
   add_foreign_key "events", "communities"
   add_foreign_key "events", "event_statuses"
   add_foreign_key "events", "event_types"
