@@ -12,18 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :alert_community_id %>
-    <%= form.text_field :alert_community_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :community_id %>
-    <%= form.text_field :community_id %>
+    <%= collection_select(:alert_community, :community_id, Community.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :alert_id %>
-    <%= form.text_field :alert_id %>
+    <%= collection_select(:alert_community, :alert_id, Alert.all, :id, :title, prompt: true) %>
   </div>
 
   <div class="actions">

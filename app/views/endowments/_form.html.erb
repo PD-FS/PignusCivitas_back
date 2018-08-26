@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= form.label :endowment_status_id %>
-    <%= form.text_field :endowment_status_id %>
+    <%= collection_select(:endowment, :endowment_status_id, EndowmentStatus.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :contract_id %>
-    <%= form.text_field :contract_id %>
+    <%= collection_select(:endowment, :contract_id, Contract.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="actions">

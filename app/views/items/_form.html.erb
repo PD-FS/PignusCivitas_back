@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :item_status_id %>
-    <%= form.text_field :item_status_id %>
+    <%= collection_select(:item, :item_status_id, ItemStatus.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
@@ -38,12 +38,12 @@
 
   <div class="field">
     <%= form.label :endowment_id %>
-    <%= form.text_field :endowment_id %>
+    <%= collection_select(:item, :endowment_id, Endowment.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :item_type_id %>
-    <%= form.text_field :item_type_id %>
+    <%= collection_select(:item, :item_type_id, ItemType.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="actions">

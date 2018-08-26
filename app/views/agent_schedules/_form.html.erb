@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= form.label :schedule_id %>
-    <%= form.text_field :schedule_id %>
+    <%= collection_select(:agent_schedule, :schedule_id, Schedule.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :security_agent_id %>
-    <%= form.text_field :security_agent_id %>
+    <%= collection_select(:agent_schedule, :security_agent_id, SecurityAgent.all, :id, :name_with_initial, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :contract_id %>
-    <%= form.text_field :contract_id %>
+    <%= collection_select(:agent_schedule, :contract_id, Contract.all, :id, :title, prompt: true) %>
   </div>
 
   <div class="actions">

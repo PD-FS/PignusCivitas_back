@@ -33,17 +33,17 @@
 
   <div class="field">
     <%= form.label :vehicle_id %>
-    <%= form.text_field :vehicle_id %>
+    <%= collection_select(:visitor, :vehicle_id, Vehicle.all, :id, :plate_number, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :community_id %>
-    <%= form.text_field :community_id %>
+    <%= collection_select(:visitor, :community_id, Community.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :person_id %>
-    <%= form.text_field :person_id %>
+    <%= collection_select(:visitor, :person_id, Person.all, :id, :name_with_initial, prompt: true) %>
   </div>
 
   <div class="actions">
