@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :community_id %>
-    <%= form.text_field :community_id %>
+    <%= collection_select(:minute_book, :community_id, Community.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="actions">

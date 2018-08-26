@@ -48,7 +48,7 @@
 
   <div class="field">
     <%= form.label :event_status_id %>
-    <%= form.text_field :event_status_id %>
+    <%= collection_select(:event, :event_status_id, EventStatus.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
@@ -78,17 +78,17 @@
 
   <div class="field">
     <%= form.label :community_id %>
-    <%= form.text_field :community_id %>
+    <%= collection_select(:event, :community_id, Community.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :event_type_id %>
-    <%= form.text_field :event_type_id %>
+    <%= collection_select(:event, :event_type_id, EventType.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :security_agent_id %>
-    <%= form.text_field :security_agent_id %>
+    <%= collection_select(:event, :security_agent_id, SecurityAgent.all, :id, :name_with_initial, prompt: true) %>
   </div>
 
   <div class="actions">

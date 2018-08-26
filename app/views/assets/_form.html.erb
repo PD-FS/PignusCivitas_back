@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :asset_status_id %>
-    <%= form.text_field :asset_status_id %>
+    <%= collection_select(:asset, :asset_status_id, AssetStatus.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">

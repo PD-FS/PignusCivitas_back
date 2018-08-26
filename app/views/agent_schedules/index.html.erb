@@ -15,8 +15,8 @@
   <tbody>
     <% @agent_schedules.each do |agent_schedule| %>
       <tr>
-        <td><%= agent_schedule.schedule %></td>
-        <td><%= agent_schedule.security_agent %></td>
+        <td><%= agent_schedule.schedule.name %></td>
+        <td><%= agent_schedule.security_agent.persona.first_name + ' ' + agent_schedule.security_agent.persona.last_name%></td>
         <td><%= agent_schedule.contract %></td>
         <td><%= link_to 'Show', agent_schedule %></td>
         <td><%= link_to 'Edit', edit_agent_schedule_path(agent_schedule) %></td>

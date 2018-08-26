@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_26_150915) do
+ActiveRecord::Schema.define(version: 2018_08_26_163617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,12 +35,10 @@ ActiveRecord::Schema.define(version: 2018_08_26_150915) do
   end
 
   create_table "alert_communities", force: :cascade do |t|
-    t.bigint "alert_community_id"
     t.bigint "community_id"
     t.bigint "alert_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["alert_community_id"], name: "index_alert_communities_on_alert_community_id"
     t.index ["alert_id"], name: "index_alert_communities_on_alert_id"
     t.index ["community_id"], name: "index_alert_communities_on_community_id"
   end
@@ -596,7 +594,6 @@ ActiveRecord::Schema.define(version: 2018_08_26_150915) do
   add_foreign_key "agent_schedules", "contracts"
   add_foreign_key "agent_schedules", "schedules"
   add_foreign_key "agent_schedules", "security_agents"
-  add_foreign_key "alert_communities", "alert_communities"
   add_foreign_key "alert_communities", "alerts"
   add_foreign_key "alert_communities", "communities"
   add_foreign_key "alerts", "alert_statuses"

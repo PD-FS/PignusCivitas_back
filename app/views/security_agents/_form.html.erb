@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :security_agent_role_id %>
-    <%= form.text_field :security_agent_role_id %>
+    <%= collection_select(:security_agent, :security_agent_role_id, SecurityAgentRole.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
@@ -28,32 +28,32 @@
 
   <div class="field">
     <%= form.label :security_company_id %>
-    <%= form.text_field :security_company_id %>
+    <%= collection_select(:security_agent, :security_company_id, SecurityCompany.all, :id, :business_name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :security_agent_id %>
-    <%= form.text_field :security_agent_id %>
+    <%= collection_select(:security_agent, :security_agent_id, SecurityAgent.all, :id, :name_with_initial, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :weapon_id %>
-    <%= form.text_field :weapon_id %>
+    <%= collection_select(:security_agent, :weapon_id, Weapon.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :agent_type_id %>
-    <%= form.text_field :agent_type_id %>
+    <%= collection_select(:security_agent, :agent_type_id, AgentType.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :schedule_id %>
-    <%= form.text_field :schedule_id %>
+    <%= collection_select(:security_agent, :schedule_id, Schedule.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :person_id %>
-    <%= form.text_field :person_id %>
+    <%= collection_select(:security_agent, :person_id, Person.all, :id, :name_with_initial, prompt: true) %>
   </div>
 
   <div class="actions">

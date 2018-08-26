@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :alert_status_id %>
-    <%= form.text_field :alert_status_id %>
+    <%= collection_select(:alert, :alert_status_id, AlertStatus.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
@@ -43,12 +43,12 @@
 
   <div class="field">
     <%= form.label :community_id %>
-    <%= form.text_field :community_id %>
+    <%= collection_select(:alert, :community_id, Community.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= collection_select(:alert, :user_id, User.all, :id, :username, prompt: true) %>
   </div>
 
   <div class="actions">

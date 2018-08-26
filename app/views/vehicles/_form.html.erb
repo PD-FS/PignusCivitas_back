@@ -48,7 +48,7 @@
 
   <div class="field">
     <%= form.label :vehicle_type_id %>
-    <%= form.text_field :vehicle_type_id %>
+    <%= collection_select(:vehicle, :vehicle_type_id, VehicleType.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="actions">
