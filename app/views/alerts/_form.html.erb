@@ -42,11 +42,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :community_id %>
-    <%= collection_select(:alert, :community_id, Community.all, :id, :name, prompt: true) %>
-  </div>
-
-  <div class="field">
     <%= form.label :user_id %>
     <%= collection_select(:alert, :user_id, User.all, :id, :username, prompt: true) %>
   </div>
