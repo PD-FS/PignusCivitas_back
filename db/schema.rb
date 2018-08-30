@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_26_163617) do
+ActiveRecord::Schema.define(version: 2018_08_30_020350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,12 +58,10 @@ ActiveRecord::Schema.define(version: 2018_08_26_163617) do
     t.bigint "alert_status_id"
     t.string "coordinates"
     t.string "evidence"
-    t.bigint "community_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["alert_status_id"], name: "index_alerts_on_alert_status_id"
-    t.index ["community_id"], name: "index_alerts_on_community_id"
     t.index ["user_id"], name: "index_alerts_on_user_id"
   end
 
@@ -597,7 +595,6 @@ ActiveRecord::Schema.define(version: 2018_08_26_163617) do
   add_foreign_key "alert_communities", "alerts"
   add_foreign_key "alert_communities", "communities"
   add_foreign_key "alerts", "alert_statuses"
-  add_foreign_key "alerts", "communities"
   add_foreign_key "alerts", "users"
   add_foreign_key "asset_stocks", "asset_stock_statuses"
   add_foreign_key "asset_stocks", "assets"
