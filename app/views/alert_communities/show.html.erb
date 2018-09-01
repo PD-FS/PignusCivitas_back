@@ -1,18 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Alert community:</strong>
-  <%= @alert_community.alert_community %>
-</p>
-
-<p>
   <strong>Community:</strong>
-  <%= @alert_community.community %>
+  <%= @alert_community.community.name %>
 </p>
 
 <p>
   <strong>Alert:</strong>
-  <%= @alert_community.alert %>
+  <%= @alert_community.alert.title %>
 </p>
 
 <%= link_to 'Edit', edit_alert_community_path(@alert_community) %> |
