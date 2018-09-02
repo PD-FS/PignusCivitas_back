@@ -15,7 +15,8 @@ file_names_list = [
     'types.json',
     'status.json',
     'communities.json',
-    'security_agent.json'
+    'security_agent.json',
+    'events.json'
 ]
 
 # Json validations
