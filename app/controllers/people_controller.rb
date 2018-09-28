@@ -25,7 +25,11 @@ class PeopleController < ApplicationController
   # POST /people.json
   def create
     @person = Person.new(person_params)
-    @person.image.attach(params[:person][:image])
+    if (params[:person][:image].nil?)
+        @person.image.attach(io: File.open('app/assets/images/default.png'), filename: 'default.png', content_type: 'image/jpeg')
+    else
+        @person.image.attach(params[:person][:image])
+    end
     respond_to do |format|
       if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
@@ -41,6 +45,9 @@ class PeopleController < ApplicationController
   # PATCH/PUT /people/1.json
   def update
     respond_to do |format|
+        if (!params[:person][:image].nil?)
+            @person.image.attach(params[:person][:image])
+        end
       if @person.update(person_params)
         format.html { redirect_to @person, notice: 'Person was successfully updated.' }
         format.json { render :show, status: :ok, location: @person }
