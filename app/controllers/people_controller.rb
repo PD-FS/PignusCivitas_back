@@ -45,9 +45,9 @@ class PeopleController < ApplicationController
   # PATCH/PUT /people/1.json
   def update
     respond_to do |format|
-        if (!params[:person][:image].nil?)
-            @person.image.attach(params[:person][:image])
-        end
+      if (!params[:person][:image].nil?)
+        @person.image.attach(params[:person][:image])
+      end
       if @person.update(person_params)
         format.html { redirect_to @person, notice: 'Person was successfully updated.' }
         format.json { render :show, status: :ok, location: @person }

@@ -91,6 +91,11 @@
     <%= collection_select(:event, :security_agent_id, SecurityAgent.all, :id, :name_with_initial, prompt: true) %>
   </div>
 
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
