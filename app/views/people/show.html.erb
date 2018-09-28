@@ -35,7 +35,10 @@
   <%= @person.office_address %>
 </p>
 
-<%= image_tag @person.image %>
+<% if @person.image.attached? %>
+    <%= image_tag @person.image %>
+<% end %>
+
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
