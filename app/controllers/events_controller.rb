@@ -25,7 +25,11 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-
+    if (params[:event][:image].nil?)
+        @event.image.attach(io: File.open('app/assets/images/default.png'), filename: 'default.png', content_type: 'image/jpeg')
+    else
+        @event.image.attach(params[:event][:image])
+    end
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -41,6 +45,9 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1.json
   def update
     respond_to do |format|
+      if (!params[:event][:image].nil?)
+        @event.image.attach(params[:event][:image])
+      end
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
         format.json { render :show, status: :ok, location: @event }
@@ -69,6 +76,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :notes, :date, :hour, :reported_by, :site, :facts, :event_status_id, :location, :end_date, :end_hour, :contact_name, :contact_phone, :community_id, :event_type_id, :security_agent_id)
+      params.require(:event).permit(:title, :notes, :date, :hour, :reported_by, :site, :facts, :event_status_id, :location, :end_date, :end_hour, :contact_name, :contact_phone, :community_id, :event_type_id, :security_agent_id, :image)
     end
 end
