@@ -132,6 +132,10 @@
             {
                 "name": "Accidente",
                 "description": "Incidente que involucra heridos o decesos de interés general para la comunidad"
+            },
+            {
+                "name": "Recomendación",
+                "description": "Tips de aliados comerciales o patrocinadores de Pignus"
             }
         ]
     },
