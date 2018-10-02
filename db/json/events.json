@@ -55,6 +55,24 @@
 				"community_id":1,
 				"event_type_id":1,
 				"security_agent_id":1
+			},
+			{
+				"title":"¿Cómo crear una estrategia de seguridad para la familia?",
+				"notes":"A continuación se proporcionan algunas sugerencias rápidas para padres preocupados acerca de cómo mantener la seguridad de la familia en línea: 1. Habla con tu familia acerca de la seguridad en línea. Sé claro acerca de las expectativas relacionadas con la utilización de la tecnología, incluidas las consecuencias que puede acarrear un uso inadecuado. Sobretodo, asegúrate de que los miembros de tu familia se sientan lo suficientemente cómodos para pedir ayuda cuando se encuentren ante decisiones difíciles. De esta manera, se sentirán seguros cuando exploren la Web solos y sabrán a quién debe recurrir - a ti - cuando tengan preguntas.",
+				"date":"2018-09-01",
+				"hour":"2000-01-01T18:45:00.000Z",
+				"reported_by":"Administrador",
+				"site":"N/A",
+				"facts":"",
+				"event_status_id":3,
+				"location":"",
+				"end_date":"2018-09-01",
+				"end_hour":"2000-01-01T18:58:00.000Z",
+				"contact_name":"",
+				"contact_phone":"",
+				"community_id":1,
+				"event_type_id":7,
+				"security_agent_id":1
             }
         ]
     }

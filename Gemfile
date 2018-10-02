@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rack-cors'
 
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
