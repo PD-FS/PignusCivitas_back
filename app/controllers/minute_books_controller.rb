@@ -25,7 +25,9 @@ class MinuteBooksController < ApplicationController
   # POST /minute_books.json
   def create
     @minute_book = MinuteBook.new(minute_book_params)
-
+    if (!params[:minute_book][:pdf_file].nil?)
+        @minute_book.pdf_file.attach(params[:minute_book][:pdf_file])
+    end
     respond_to do |format|
       if @minute_book.save
         format.html { redirect_to @minute_book, notice: 'Minute book was successfully created.' }
