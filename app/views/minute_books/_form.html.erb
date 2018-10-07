@@ -36,6 +36,11 @@
     <%= collection_select(:minute_book, :community_id, Community.all, :id, :name, prompt: true) %>
   </div>
 
+  <div class="field">
+    <%= form.label :pdf_file %>
+    <%= form.file_field :pdf_file %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

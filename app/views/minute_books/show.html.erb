@@ -25,5 +25,10 @@
   <%= @minute_book.community %>
 </p>
 
+<p>
+  <strong>PDF</strong>
+  <%= link_to "Download", @minute_book.pdf_file %>
+</p>
+
 <%= link_to 'Edit', edit_minute_book_path(@minute_book) %> |
 <%= link_to 'Back', minute_books_path %>
