@@ -43,6 +43,9 @@ class MinuteBooksController < ApplicationController
   # PATCH/PUT /minute_books/1.json
   def update
     respond_to do |format|
+      if (!params[:minute_book][:pdf_file].nil?)
+        @minute_book.pdf_file.attach(params[:minute_book][:pdf_file])
+      end
       if @minute_book.update(minute_book_params)
         format.html { redirect_to @minute_book, notice: 'Minute book was successfully updated.' }
         format.json { render :show, status: :ok, location: @minute_book }
