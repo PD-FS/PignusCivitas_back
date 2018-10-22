@@ -33,6 +33,7 @@ gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
+gem "graphql"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -64,3 +65,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'graphiql-rails', group: :development
